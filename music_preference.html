@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Preferences Survey form</title>
+    <link rel="icon" type="image" href="Me.jpg"/>
+    <link rel="stylesheet" href="epkstyle.css" type="text/css">
+    <style>
+        #body-main{
+            font-family: sans-serif;
+            margin-left: 350px;
+            margin-right: 350px;
+            padding:10px;
+            border: 5px solid rgb(231, 231, 20);
+            color: antiquewhite;            
+            font-size: larger;
+        }
+        body{
+            background-color: rgb(11, 9, 7); 
+            background-image: url(newstarbg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        th, td{
+            padding:10px;
+        }
+        label{
+            margin-right:20px;
+        }
+        button{
+            margin: 2px;
+            font-size: large;
+        }
+
+        #match_progress{
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: rgb(100,83,77);
+        }
+
+        #match_progress[value]::-webkit-progress-bar{
+            background-color: rgb(100,83,77);
+        }
+
+        #match_progress[value]::-webkit-progress-value{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="head1" style="background: none; height: 400px">
+        
+        <div style="text-align: right; padding: 0px 325px 0px 200px; font-size: xxx-large;">
+        <h1>AKASH MODY</h1>
+        <p>Singer |<br> Songwriter |<br> Drummer |<br> Engineer |</p>
+        </div>
+
+           
+    </header>
+
+    <nav style="margin-bottom:30px; margin-left: 330px; margin-right: 350px; font-size: large;">
+        <a href="index.html">Home</a> | 
+        <a href="mystory.html">My Story</a> |
+        <a href="#">Accomplishments</a> |
+        <a href="#">Career</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <div id="body-main">
+        
+    <h1>Your Music Preference - Survey Form</h1>
+    <h5>Please fill out and submit the survey form at the earliest</h5>
+    <hr>
+    <form action="" method="">
+        <table>
+            <colgroup>
+            <col width = "400px">
+            <col width = "500px">            
+            </colgroup>
+            <tr>
+                <td>1. Name</td>
+                <td><input type="text" name = "user" id = "user"></td>
+            </tr>
+            <tr>
+                <td>2. Age</td>
+                <td><input type="number" name = "age" min="13" max="100"></td>
+            </tr>
+            <tr>
+                <td>3. How do you like best to listen to your music?</td>
+                <td><input type="radio" id="live" name="location" value="live">
+                    <label for="live">at a live setting</label>
+                    <input type="radio" id="home" name="location" value="home">
+                    <label for="home">at home</label>
+                    <input type="radio" id="work_or_school" name="location" value="work_or_school">
+                    <label for="work_or_school">at work / school</label>
+                    <input type="radio" id="restaurant_or_clubs" name="location" value="restaurant_or_clubs">
+                    <label for="restaurant_or_clubs">at a restaurant or clubs</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">4. Specify, how often</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table style="border: 1px solid; font-size: 0.8em; ">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>every day</th>
+                                <th>a few times a week</th>
+                                <th>once a week</th>
+                                <th>several times a month</th>
+                                <th>once a month</th>
+                                <th>less often than once a month</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>You stay at home and listen to some relaxing music</td>
+                                <td style="text-align: center;"><input type="radio" name="stay_home" value="every day"></td>
+                                <td style="text-align: center;"><input type="radio" name="stay_home" value="a few times a week"></td>
+                                <td style="text-align: center;"><input type="radio" name="stay_home" value="once a week"></td>
+                                <td style="text-align: center;"><input type="radio" name="stay_home" value="several times a month"></td>
+                                <td style="text-align: center;"><input type="radio" name="stay_home" value="once a month"></td>
+                                <td style="text-align: center;"><input type="radio" name="stay_home" value="less often than once a month"></td>        
+                            </tr>
+                            <tr>
+                                <td>You go out</td>
+                                <td style="text-align: center;"><input type="radio" name="you_go_out" value="every day"></td>
+                                <td style="text-align: center;"><input type="radio" name="you_go_out" value="a few times a week"></td>
+                                <td style="text-align: center;"><input type="radio" name="you_go_out" value="once a week"></td>
+                                <td style="text-align: center;"><input type="radio" name="you_go_out" value="several times a month"></td>
+                                <td style="text-align: center;"><input type="radio" name="you_go_out" value="once a month"></td>
+                                <td style="text-align: center;"><input type="radio" name="you_go_out" value="less often than once a month"></td>        
+                            </tr>
+                            <tr>
+                                <td>You decide to make your own music</td>
+                                <td style="text-align: center;"><input type="radio" name="on_your_own" value="every day"></td>
+                                <td style="text-align: center;"><input type="radio" name="on_your_own" value="a few times a week"></td>
+                                <td style="text-align: center;"><input type="radio" name="on_your_own" value="once a week"></td>
+                                <td style="text-align: center;"><input type="radio" name="on_your_own" value="several times a month"></td>
+                                <td style="text-align: center;"><input type="radio" name="on_your_own" value="once a month"></td>
+                                <td style="text-align: center;"><input type="radio" name="on_your_own" value="less often than once a month"></td>        
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">5. The most common places you visit are venues that play music of origin / genre:</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="Bollywood" value="Bollywood" name="music_genre_preference">
+                                <label for="Bollywood">Bollywood</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="Indian" value="Indian" name="music_genre_preference">
+                                <label for="Indian">Indian Classical</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="Latin" value="Latin" name="music_genre_preference">
+                                <label for="Latin">Latin</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="Jazz" value="Jazz" name="music_genre_preference">
+                                <label for="Jazz">Jazz</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="Blues" value="Blues" name="music_genre_preference">
+                                <label for="Blues">Blues</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="Rock" value="Rock" name="music_genre_preference">
+                                <label for="Rock">Rock</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="Pop" value="American" name="music_genre_preference">
+                                <label for="American">American</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="Other" value="Other" name="music_genre_preference">
+                                <label for="Other">Other</label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2">Given an option, how likely would you want to become a professional musician yourself?</td>
+            </tr>   
+            <tr><td colspan = "2"><input type="radio" name="pro_artist" id="sure" value="sure">
+                    <label for="sure">Sure</label>
+                    <input type="radio" name="pro_artist" id="no" value="no">
+                    <label for="no">No</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2" style="text-align: center;"><button type="submit" onclick="fun()">Submit</button><button type="reset">Reset</button></td>
+            </tr>
+        </table>
+        
+    </form>
+
+    <label for="match_progress">Match Progress</label>
+    <progress id = "match_progress" max="100" value="45" ></progress>
+    </div>
+
+    <script>
+        sessionStatus = localStorage.getItem('session');
+        if(sessionStatus != "active"){
+            alert("Please Login First");
+            window.location.replace("login.html");
+        }else
+            document.getElementById("user").value = localStorage.getItem('name');
+
+
+        function fun(){
+            var opt3list = document.getElementsByName("on_your_own");
+            var opt3 = Array.from(opt3list).find((radio) => radio.checked);
+            let genres = document.getElementsByName("music_genre_preference");
+            let total = 0;
+            for(i=0; i < genres.length; i++){
+                if(genres[i].checked) total++;
+            }
+            if(total > 3 && (opt3.value == "a few times a week" || opt3.value  == "every day")){
+                alert("You are a true music enthusiast!!!")
+                window.open("index.html")
+                window.close()
+            }else{
+                alert("Its good...you are getting there")
+                window.open("index.html")
+                window.close()
+            }
+        }
+        
+    </script>
+</body>
+</html>

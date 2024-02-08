@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myself</title>
+    <title>Akash Mody</title>
     <link rel="icon" type="image" href="Me.jpg"/>
 
     <style>
@@ -58,11 +58,11 @@
         .aside1{
             background-color: rgb(11, 9, 7);  
             background-clip: border-box; 
-            color: antiquewhite;
+            color: antiquewhite; 
             width: 30%; 
             float: left; 
             margin: 20px; 
-            border-radius: 5px;
+            border-radius: 5px; 
         }
         .foot1{
             background-color: rgb(11, 9, 7); 
@@ -71,6 +71,33 @@
             clear: both; 
             margin: 20px;
             border-radius: 5px;
+        }
+        .nav-item{ 
+            background-color: rgb(11, 9, 7); 
+            padding: 20px; 
+            margin: 10px; 
+            border-radius: 5px; 
+            background-clip: padding-box;
+            transition: background-color 0.3s ease; 
+        } 
+        .nav-item:hover{ 
+            background-color: #292120; 
+            background-clip: padding-box;
+        }
+
+        button{
+            background-color: rgb(11, 9, 7); 
+            color: rgb(78, 65, 195);
+            margin: 20px; 
+            padding: 20px; 
+            margin: 10px; 
+            border-radius: 5px; 
+            font-size: x-large;
+            transition: background-color 0.3s ease; 
+        }
+        button:hover{ 
+            background-color: #221446; 
+            background-clip: padding-box;
         }
     </style>
 </head>
@@ -90,19 +117,33 @@
            
     </header>
 
-    <nav>
-        <a href="#">Home</a> | 
-        <a href="mystory.html">My Story</a> |
-        <a href="#">Accomplishments</a> |
-        <a href="#">Career</a> |
-        <a href="#">Contact</a>
+    <nav float="left" style="display:inline-block; width:70%">
+        <a class="nav-item" href="index.html">Home</a> | 
+        <a class="nav-item" href="mystory.html">My Story</a> |
+        <a class="nav-item" href="#">Accomplishments</a> |
+        <a class="nav-item" href="#">Career</a> |
+        <a class="nav-item" href="#">Contact</a>
     </nav>
+
+    <button id = "reg" float="left" onclick="window.open('register.html', '_self')">Register</button>
+    <button id = "login" float="left" onclick="window.open('login.html', '_self')">Login</button>
+    <button id = "logout" float="left" onclick="window.open('logout.html')">Logout</button>
+
+    <script>
+        sessionStatus = localStorage.getItem('session');
+        if (sessionStatus == "active"){
+            document.getElementById("reg").style.display = "none";
+            document.getElementById("login").style.display = "none";
+        }
+        else           
+            document.getElementById("logout").style.display = "none";
+    </script>
 
     <section class="sec1">
         <header>
             <img id="mylogo" src="Me.jpg" >
         <h1 style="padding:10px; font-size: xx-large">Hello!</h1>
-       </header>
+        </header>
        <article>
         <p style="padding:10px; font-size: x-large; text-align: justify;">Welcome to my expression page, If you are looking for a strong-willed, independent individual, just expressing themselves unabashedly...then you've come to the right place. <br><br>
         I am a 26 year old part of the common folk born and brought up in Mumbai, the City of Dreams - Oh yeah...I am one of those dreamers of the day. I want to do many things in life - play music,
@@ -128,10 +169,13 @@
     </section>
     
     <a href="mystory.html"><aside class="aside1">
-        <figure>
+        <figure style="margin-bottom: 5px;">
         <video src="Piano.mp4" alt="Piano" style="width: 100%;">
-        </figure>
-    </aside></a>
+        </figure></a>
+        <p style="text-align: justify; font-size: x-large;">I would appreciate if you could give a 
+            minute of your time to fill out the following survey</p>
+        <a href="music_preference.html">Music and You</a>
+    </aside>
 
     
 

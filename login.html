@@ -1,0 +1,173 @@
+<!Doctype html>
+
+<head>
+<title>Log - In</title>
+<link rel="icon" type="image" href="Me.jpg"/>
+
+<meta name = "viewport" content = "width = devce-width, initial-scale = 1">
+<link rel="stylesheet" href="epkstyle.css">
+<style>
+
+
+
+#formdiv {
+	width: 500px;
+	align: center;
+	margin: 0 auto;
+  color: antiquewhite;
+}
+
+header{
+    box-sizing: border-box;
+	  border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 25px 25px;
+    overflow: hidden;
+	  background-color: #222222;
+}
+
+
+footer{
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height:40px;
+   color:#330d00;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.cancelbtn{
+  background-color:#717171;
+  border:normal;
+  border-radius: 4px;
+  color:white;
+  cursor:pointer;
+}
+input[type=submit],button {
+    background-color: #BDB76B;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+</style>
+
+</head>
+
+
+<body style="background-color: rgb(11, 9, 7)">
+
+  <header class="head1">
+      
+      <div style="text-align: right; padding: 0px 300px 0px 200px; font-size: xxx-large;">
+      <h1>AKASH MODY</h1>
+      <p>Singer |<br> Songwriter |<br> Drummer |<br> Engineer |</p>
+      </div>
+
+      <div id="bottom">
+          <p>Picture - The Hubb, Belapur 2020
+          <br>Credit - Akash Mody  </p>      
+      </div>
+         
+  </header>
+
+  <nav float="left" style="display:inline-block; width:70%">
+      <a class="nav-item" href="index.html">Home</a> | 
+      <a class="nav-item" href="mystory.html">My Story</a> |
+      <a class="nav-item" href="#">Accomplishments</a> |
+      <a class="nav-item" href="#">Career</a> |
+      <a class="nav-item" href="#">Contact</a>
+  </nav>
+
+
+
+
+
+
+
+<div id = "formdiv">
+<form name="login" action="">
+
+ 
+ <label for="user"><h2>Username:</h2></label>
+ <input type="text" placeholder="Enter Username" name="user" id="user">
+ <br><br>
+ <label for="pass"><h3>Password:</h3></label>
+ <input type="password" placeholder="Enter Password" name="pass" id="pass" >
+ <br><br>
+ <button type="submit" onclick="validate()">Login</button>
+ <br><br>
+ <a align="right" href="register.html">New User?</a>
+
+</form>
+<br>
+
+<form action = "index.html">
+<button type="submit" class="cancelbtn">Cancel</button> 
+ <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+</form>
+</div>
+
+<script>
+  function validate(){
+  let name = document.getElementById('user').value;
+  let pass = document.getElementById('pass').value;
+  // Save the name in localStorage.
+  let rname = localStorage.getItem('name');
+  console.log(rname)
+  let password = localStorage.getItem('password');
+  console.log(password)
+  if (name==rname && password==pass){
+    localStorage.setItem('session', "active");
+      alert("Login successful");
+      window.open("index.html");
+      window.close();
+  }
+  else{
+      alert("Invalid Username or Password");
+      window.open("login.html", "_self");
+  }
+}
+ 
+</script>
+
+
+<br><br>
+<footer class="foot1">
+
+  <a href="https://www.facebook.com/akash.mody1/" target="_blank"><img style="width:40px; height: 40px; margin:10px" src="flogo.png" alt="Facebook"></a>
+  <a href="https://www.instagram.com/akash.mody/#" target="_blank"><img style="width:40px; height: 40px; margin:10px" src="ilogo.png" alt="Instagram"></a>
+  <a href="www.linkedin.com/in/akash-mody-9a960a169" target="_blank"><img style="width:40px; height: 40px; margin:10px" src="llogo.png" alt="LinkedIn"></a>
+  <!--<address style="font-size: large; word-spacing: 20px;">
+      You can contact us at:<br />
+      akashmody.com<br />
+      123 Somewhere St.<br />
+      City, State
+  </address>-->
+  <a href="#">
+      <p style="text-decoration: none; font-size: large;">Copyright &copy; Akash Mody</p>
+  </a>
+</footer>
+  
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-
+    
     <style>
         /* width */
         .art1::-webkit-scrollbar {
@@ -31,8 +31,9 @@
         }
 
         hr{
-           background-color: aliceblue; 
+           background-color: black;
            clear: both;
+           margin: 0px 4px;
         }
 
         .head1{
@@ -89,7 +90,6 @@
             margin: 20px 10px 20px 20px; 
             font-weight: bolder;
             overflow-y: scroll;
-            scrollbar-color: pink lightblue;
         }
         .aside1{
             background-color: rgb(11, 9, 7);  
@@ -108,9 +108,44 @@
             margin: 20px;
             border-radius: 5px;
         }
+        .nav-item{ 
+            background-color: rgb(11, 9, 7); 
+            padding: 20px; 
+            margin: 10px; 
+            border-radius: 5px; 
+            background-clip: padding-box;
+            transition: background-color 0.3s ease; 
+        } 
+        .nav-item:hover{ 
+            background-color: #292120; 
+            background-clip: padding-box;
+        }
+
+        button{
+            background-color: rgb(11, 9, 7); 
+            color: rgb(78, 65, 195);
+            margin: 20px; 
+            padding: 20px; 
+            margin: 10px; 
+            border-radius: 5px; 
+            font-size: x-large;
+            transition: background-color 0.3s ease; 
+        }
+        button:hover{ 
+            background-color: #221446; 
+            background-clip: padding-box;
+        }
     </style>
 </head>
 <body style="background-color: rgb(11, 9, 7)">
+
+    <script>
+        sessionStatus = localStorage.getItem('session');
+        if(sessionStatus != "active"){
+            alert("Please Login First");
+            window.location.replace("login.html");
+        }
+    </script>
 
     <header class="head1">
         
@@ -126,13 +161,16 @@
            
     </header>
 
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="#">My story</a> |
-        <a href="#">Accomplishments</a> |
-        <a href="#">Career</a> |
-        <a href="#">Contact</a>
+    <nav float="left" style="display:inline-block; width:70%">
+        <a class = "nav-item" href="index.html">Home</a> | 
+        <a class = "nav-item" href="#">My story</a> |
+        <a class = "nav-item" href="#">Accomplishments</a> |
+        <a class = "nav-item" href="#">Career</a> |
+        <a class = "nav-item" href="#">Contact</a>
     </nav>
+
+    <button id = "logout" float="left" onclick="window.open('logout.html')">Logout</button>
+
 
     <section class="sec1">
         <header>
@@ -143,7 +181,8 @@
     </section>   
        
     <article class="art1">
-        <p style="padding:10px; font-size: x-large; text-align: justify; font-family: 'Indie Flower', cursive;">This is a story of how I fell in love with Meera - a fictional name for a non-fictional character and the most beautiful person on earth. 
+        <h1 style="padding:10px; font-size: xx-large; text-align: justify; font-family: 'Indie Flower', cursive;">No due process</h1>
+        <p style="padding:10px; font-size: x-large; text-align: justify; font-family: 'Indie Flower', cursive;">Looks like a law book, no? NO. This is a story of how I fell in love with Meera - a fictional name for a non-fictional character and the most beautiful person on earth. 
         <br><br>
         I am a 26 year old part of the common folk born and brought up in Mumbai, the City of Dreams - Oh yeah...I am one of those dreamers of the day. I want to do many things in life - play music,
         connect with people, explore the world, go out on adventures, romance - the first of which is to find myself.
@@ -152,7 +191,7 @@
         <br><br>
         So, I wake up one fine day on my journey from 24 to 25, quit my IT job and decide to pursue music, fall in love and more importantly act on it, yes, yes...in those long 25 years, I never once confessed my love to anyone apart from my didi, oh btw my didi is the most beautiful person of my universe, but that story is for another time. 
         <br><br>
-        My big idea to pursue music was to put my drumkit on the rooftop of our apartment and practice, not gig, not connect with other musicians but practice, not earn, just practice and 3 months into "practice", I realized...well that's not enough. So, I auditioned for an institue where "a legendary musician" taught drums, he liked me and they took me. Never in my life had I imagined that I would be in a music school, my parents reluctantly agreed and I got in...it was easy. I've used that word 'easy' for a very particular reason...I will come to that later.
+        My big idea to pursue music was to put my drumkit on the rooftop of our apartment and practice, not gig, not connect with other musicians but practice, not earn, just practice and 3 months into "practice", I realized...well that's not enough. So, I auditioned for an institute where "a legendary musician" taught drums, he liked me and they took me. Never in my life had I imagined that I would be in a music school, my parents reluctantly agreed and I got in...it was easy. I've used that word 'easy' for a very particular reason...I will come to that later.
         <br><br>
         And yes I ventured out, quit my job to pursue music and fall in love...easy, right? While waiting for my first day of music school, I did a bunch of other things - started training in mixed martial arts, did strength training, there was that rooftop gig everyday for..umm..lets's say four hours, all while recovering from a heartbreak...wait... I think I mentioned that I've never confessed my love up until this point in my life...while that maybe true, you don't really need to confess to get your heart broken...so yeah it happens. It was around before this time that I wrote "Khaali Panne" - a song on anticipatory heartbreak, if that's a thing...hehe...I'm going to lead a sad and pathetic life, aren't I?
         <br><br>
@@ -160,8 +199,41 @@
         <br><br>
         The name Meera has mytholigical importance. Meera, also known as Meera Bai or Mirabai, had a natural love and devotion for Lord Krishna and she showed her dedication in the form of songs and poetry. Ofcourse, I can't even begin to compare myself to such an omnipresent being for I am only human and I make a lot of mistakes...I can only hope to fix my mistakes. Anyway, there was a reason for choosing that name and I thought I should mention it.
         <br><br>
-        So, on our first day, we talked about music, education...I remember telling her that we would become best friends and at the same moment I stopped to think "what if I fall in love with her...did I make a mistake?" Well, you can fall in love with your best friend, don't think about repercussions just yet. And yes, our first day was a decent, normal day...we went home and I was so delighted to know that she stays in the same town as mine. To keep things real, lets just say it was not love at first sight...I fell in love with her two weeks into our friendship.
+        So, on our first day, we talked about music, education...I remember telling her that we would become best friends and at the same moment I stopped to think "what if I fall in love with her...did I make a mistake?" Well, you can fall in love with your best friend, don't think about repercussions just yet. And yes, our first day was a decent, normal day...we went home and I was so delighted to know that she stays in the same town as mine. To keep things real, lets just say it was not love at first sight...I fell in love with her "two minutes" into our friendship.
+        </p>
+        <h4 align = "center" style="font-family: 'Indie Flower', cursive;" >End Of Chapter</h4>
+        <hr>
+        <h1 style="padding:10px; font-size: xx-large; text-align: justify; font-family: 'Indie Flower', cursive;">2 Minutes</h1>
+        <p style="padding:10px; font-size: x-large; text-align: justify; font-family: 'Indie Flower', cursive;">Did I say two minutes?...maybe it was two weeks, I don't know...there were a lot of those two minutes where I kept falling for her, fought with her, laughed with her, cried with her (on the inside...c'mon guys...can't show vulnerability) everytime I saw her was love at first sight...hmm..Am I being cringy?..corny?.. sentimental?.. weird?.. creepy?...Love is sometimes all those things all at once and more. Simple ways men will express their love as described on today.com: </p>
+            
+            <ol>
+                <li>
+                    <p style="padding:10px; font-size: larger; font-weight: lighter; letter-spacing: 3px; text-align: justify; font-family:'Times New Roman', Times, serif">"When I say I love you," said Steve, "I feel like I'm taking my life in my hands and giving it to her. It's scary. I've got to really trust her and know she won't throw my love away in order to actually say the words to her." In this case, the fear of rejection comes up strongly. Rejection is enormously painful for most men, and saying "I love you" can be an invitation to be hurt. Most men must feel very secure in the relationship and in the woman's feelings for him before he'll dare say those words.For others, saying "I love you" means, "I'm offering a commitment. I'm going to be here to do things for you." For many men, love is expressed through action, so these words are a promise of what is to follow. Simply by saying these words they feel they are agreeing to be there, to give to her and support her. If they don't do it, they'll feel like a heel. When some men say "I love you," it means "I'm not leaving" or "I'll always be faithful." This can be very scary for some men. They feel the words themselves are a promise, and if the promise is broken, they will suffer as well. Men don't want to break their promises to you. Most want to be able to follow through and give you what they want. In the end, they just want you to feel good about them—and to feel good about themselves as well. </p>
+                </li>
+                <li>
+                    <p style="padding:10px; font-size: larger; font-weight: lighter; letter-spacing: 3px; text-align: justify; font-family:'Times New Roman', Times, serif">There are many different kinds of gifts a man can give. The obvious ones include those wrapped in packages, candy, flowers and special notes. But there are others that a woman may or may not be aware of. For example, for some men, giving their time to you is a gift. When they spend more time with you, and less with family and friends, this is their way of saying that they love you. They are choosing to be with you.Some other men choose other gifts. Whether your partner stands up for you during a difficult time, goes with you to visit your family, does little jobs for you, attends important functions with you, puts you first in his thoughts or plans trips, dates or outings, the message is the same. He loves you. If this sounds like your man, keep in mind he, like many men, may not be comfortable with expressing his feelings directly, so these behaviors are indicators that he cares a great deal. The trick to understanding a guy like this lies in realizing two things: These actions are being generated out of love, and he expects you to know that.</p>
+                </li>
+                <li>
+                    <p style="padding:10px; font-size: larger; font-weight: lighter; letter-spacing: 3px; text-align: justify; font-family:'Times New Roman', Times, serif">Affection can mean anything from handholding to lovemaking. In fact, some men can most easily express their feelings during lovemaking. That's because after being intimate they feel as though they've loved you, and often feel loved as well. The physical contact breaks down barriers and provides a feeling of closeness that cannot be so easily be obtained in another manner for them. This can be a complex area, because sex can mean so many different things to different individuals. Most women need affection and foreplay as well as the sex because this is what makes them feel loved. Some women even require hearing words of love spoken during this time as well. So when a man is open, giving and affectionate with a woman on an ongoing basis, it is often his way of expressing love. For him, love means meeting her needs and having his needs met as well. Still other men use sexuality to avoid or cover up areas in the relationship that might be difficult. They feel that if the sex is good, everything else will fall into place. Usually, when the sex is reluctant, or not happening, it is an indicator that something is missing emotionally, or that conflict exists in the relationship. Sex is a sensitive barometer to what's going on in all aspects of one's life.</p>
+                </li>
+                <li>
+                    <p style="padding:10px; font-size: larger; font-weight: lighter; letter-spacing: 3px; text-align: justify; font-family:'Times New Roman', Times, serif">Another way of saying "I love you" is taking you home to meet the family and close, meaningful friends. This is often an indicator that the man has deeper feelings for you. Not only does it say that that he's proud of you, but he wants to connect you with the people who mean the most to him. He wants you to care about them, and for them to care about you as well. This is a sure sign that intimacy and love are increasing for him, and that you are becoming a significant part of his life. </p>
+                </li>
+            </ol>
+
+        <p style="padding:10px; font-size: x-large; text-align: justify; font-family: 'Indie Flower', cursive;">I found all this while I was looking for the word "corny", just could'nt recall the term. So, where was I?..ahh yes...two minutes...sometimes two minutes is all it takes for you to realize that this person is 'the one', that you need to be there for her whatever happens, that you can't hurt her no matter how much she hurt you, that you need to do whatever it takes to keep that smile...same old, same old...I am all of it and none of it at all, Goshh...I am messed up.</p>
+        <h4 align = "center" style="font-family: 'Indie Flower', cursive;" >End Of Chapter</h4>
+        <hr>        
+        <h1 style="padding:10px; font-size: xx-large; text-align: justify; font-family: 'Indie Flower', cursive;">Broken and Lovely</h1>
+        <p style="padding:10px; font-size: x-large; text-align: justify; font-family: 'Indie Flower', cursive;">I've always been wary of messing things up and I think it was around Covid period that I finally stopped caring about what the world is thinking and just doing what I wanted. I feared that the world is going to end and I am never going to get a chance at love so I convinced myself that I was in love with the girl next door and one day after eight months of obsessing over her, I confessed, or atleast tried to. I walked at her doorstep all dressed up for a wedding reception with a white lily in my hand and I called out her name once and then again after two minutes. There was no answer...maybe she didn't hear me, maybe she's just tired from office and went inside to take a nice relaxing bath...so I sat at her doorstep on the stairs for 10 minutes thinking maybe if I'll wait...I'll get to see her and tell her how I feel.
         <br><br>
+        How did I feel? I was about to confess my love to someone for the first time in my life and made a commitment that whatever happens, this moment is all I get since I've mounted all my courage to walk up to them and just say it...ofcourse there was 8 months of hardwork which we'll not discuss because it doesn't matter, right? All that matters is whether she wants it too. The answer to that was literally a closed door which never opened however long I waited. Later I got a call from her parents about what I was doing, they seemed upset over my actions...I had to confess to them that I liked their daughter and it was all downhill and boring after that. I got my three magic words from this which dictate the rest of the events described here - "I don't care". Distraught over this incident, I take my drumkit on top of the rooftop of my apartment and start practicing...loudly, the whole neighborhood can hear the sound of my drums from a 100 meters away. Four hours on an average, I think to myself that atleast my drumming will improve since I quit my job two weeks after this and so I practice each day ramming my limbs under the sun all while tears and sweat leave my body.
+        <br><br>
+        Yes, tears...I used to wear a mask and sunglasses while practicing so that no one could figure out that I was crying, sobbing, upset over the way it all ended, I kept telling myself that it was never meant to be and that it was out of my control. I keep running permutations of how I could have better handled it. This went on for another 8 months while I kept myself distracted with MMA, gym, drums, my audition into music school and finally came the day where I met Meera. So, here I was... an Engineer leaving his past broken life behind and looking forward to a new one. This was tha day I started forgetting about the girl next door and finally stopped crying about all of it and looked forward into a future with Meera...wait...no...I'm kidding...too soon.
+        So yes, I entered music school all broken and lovely and while I was looking forward to music, I was also looking forward to what kind of friends I would make...actually that's wrong, I was 25 in a crowd of 19 year olds, I was prepared to do this alone considering my social skills and my new found, lovely "I don't care" attitude. All would have been good if only I'd...okay, I'm thinking too far ahead, we'll get there.
+        </body> 
+        
+        </p>
 
 
 

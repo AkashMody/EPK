@@ -1,0 +1,77 @@
+hr{
+    background-color: antiquewhite; 
+    height: 4px;
+ }
+
+ .head1{
+     color: rgb(231, 231, 20);
+     height: 800px; 
+     width: 1624px;
+     background-color: #361313; 
+     margin: 20px; 
+     border-radius: 5px;
+     background-image: url(Drumshead.jpg);
+     background-size: cover;
+     position: relative;
+ }
+
+ #bottom{
+     position: absolute;
+     bottom:0;
+     right:0;
+     margin: 20px;
+ }
+ a{
+     text-decoration: none;
+     color:rgb(206, 136, 65);
+     font-size: x-large;
+     margin: 20px;
+ }
+ #mylogo{
+     border-radius: 260px; 
+     height:400px; 
+     width:400px; 
+     /*margin-left:auto; 
+     margin-right: auto; to align center*/ 
+     display:block; 
+     float:left;
+     margin: 10px;
+     padding: 10px;
+ }
+ .sec1{
+     background-color: rgb(11, 9, 7); 
+     color: antiquewhite;
+     width: 65%; 
+     float: left; 
+     margin: 20px; 
+     border-radius: 5px;
+ }
+ .aside1{
+     background-color: rgb(11, 9, 7);  
+     background-clip: border-box; 
+     color: antiquewhite; 
+     width: 30%; 
+     float: left; 
+     margin: 20px; 
+     border-radius: 5px; 
+ }
+ .foot1{
+     background-color: rgb(11, 9, 7); 
+     text-align: center; 
+     color: antiquewhite;
+     clear: both; 
+     margin: 20px;
+     border-radius: 5px;
+ }
+ .nav-item{ 
+     background-color: rgb(11, 9, 7); 
+     padding: 20px; 
+     margin: 10px; 
+     border-radius: 5px; 
+     background-clip: padding-box;
+     transition: background-color 0.3s ease; 
+ } 
+ .nav-item:hover{ 
+     background-color: #292120; 
+     background-clip: padding-box;
+ }
